@@ -52,8 +52,46 @@ DEBUG=express-demo:* yarn start
 
 Navigate to `http://localhost:3000/`.
 
-## 
+## to be added
 
 ```bash
 yarn add nodemon --dev
+```
+
+## Eslint
+
+```bash
+npm info "eslint-config-airbnb-base@latest" peerDependencies
+yarn add --dev eslint@4.19.1 eslint-plugin-import@2.12.0
+yarn add --dev eslint-config-airbnb-base
+yarn add --dev jest eslint-plugin-jest
+```
+
+`.eslintrc.js`:
+
+```js
+module.exports = {
+  extends: [
+    'airbnb-base',
+    'plugin:jest/recommended',
+  ],
+  plugins: [
+    'import',
+    'jest',
+  ],
+  env: {
+    node: true,
+    'jest/globals': true,
+  },
+};
+```
+
+`package.json`:
+
+```js
+"scripts": {
+  "lint": "eslint **/*.js",
+  "test": "jest src",
+  "coverage": "jest --collectCoverageFrom=src/**.js --coverage src"
+},
 ```
