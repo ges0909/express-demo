@@ -3,11 +3,10 @@
 ## Setup (manual)
 
 ```bash
-mkdir express-demo
-cd express-demo
+mkdir express-demo && cd express-demo
 yarn init
 yarn add express
-code . &
+code .
 ```
 
 Edit file `app.js`.
@@ -52,7 +51,7 @@ DEBUG=express-demo:* yarn start
 
 Navigate to `http://localhost:3000/`.
 
-## to be added
+## Nodemon
 
 ```bash
 yarn add nodemon --dev
